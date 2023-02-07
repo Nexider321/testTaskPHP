@@ -8,9 +8,15 @@ use src\Tests\Bootstrap;
 use src\Tests\TreeTest;
 
 require_once __DIR__.'/../vendor/autoload.php';
+
+try {
+    Bootstrap::Tests();
+} catch (\Exception $e){
+    echo $e->getMessage(), "\n";
+    exit();
+}
 $appleTrees = 10;
 $pearTrees = 25;
-Bootstrap::Tests();
 
 $garden = new Garden();
 for ($i = 1; $i <= $appleTrees; $i++) {

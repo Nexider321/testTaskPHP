@@ -3,11 +3,14 @@ declare(strict_types=1);
 
 namespace src\Tests;
 
-use mysql_xdevapi\Exception;
+use Exception;
 use src\Tree;
 
 final class TreeTest
 {
+    /**
+     * @throws Exception
+     */
     public function testCollectFruit() {
         $tree = new Tree(1, 'apple');
         $tree->collectFruit();

@@ -5,13 +5,16 @@ namespace src\Tests;
 
 final class Bootstrap
 {
-    public static function Tests()
+    /**
+     * @throws \Exception
+     */
+    public static function Tests(): void
     {
+            $tree = new TreeTest();
+            $tree->testCollectFruit();
+            $garden = new GardenTest();
+            $garden->testCollectFruits();
 
-        $tree = new TreeTest();
-        $tree->testCollectFruit();
-        $garden = new GardenTest();
-        $garden->testCollectFruits();
     }
 
 }
